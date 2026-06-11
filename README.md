@@ -1,8 +1,14 @@
 # Reelwright
 
-Reelwright is a CLI-first AI video production pipeline. It turns a JSON creative
-brief into a video plan, script, shot manifest, Higgsfield generation jobs,
-ffmpeg exports, captions, and QA reports.
+**Turn a video idea into a structured AI production run from the terminal.**
+
+Reelwright is a CLI-first AI video production pipeline for Higgsfield and
+ffmpeg. It turns a JSON creative brief into a video plan, script, shot manifest,
+generation jobs, platform-ready exports, captions, and QA reports.
+
+```text
+brief.json -> video-plan.json -> shot-manifest.json -> Higgsfield clips -> ffmpeg exports -> captions + QA
+```
 
 The project is built for local use. By default, planning is deterministic: the
 CLI validates the JSON brief and expands it through built-in templates, so
@@ -10,7 +16,14 @@ CLI validates the JSON brief and expands it through built-in templates, so
 is available through Ollama or LM Studio. Full rendering uses Higgsfield and
 ffmpeg.
 
-## Quickstart
+## Why Use It
+
+- Start with a repeatable brief instead of one-off generation prompts.
+- Inspect the script, timing, shot list, and prompts before spending credits.
+- Generate clips through Higgsfield, then assemble exports with ffmpeg.
+- Keep captions, QA reports, and project state on disk for review and resume.
+
+## Try It Without Credits
 
 ```bash
 git clone https://github.com/v0idum/reelwright reelwright
@@ -22,6 +35,54 @@ npm run demo:plan
 `demo:plan` is safe to run first. It writes planning artifacts under
 `projects/ai-video-workflow-demo/` without calling Higgsfield, ffmpeg, or an
 LLM.
+
+You will get:
+
+```text
+projects/ai-video-workflow-demo/
+  video-plan.json
+  script.md
+  shot-manifest.json
+```
+
+Example shot from the generated manifest:
+
+```json
+{
+  "id": "shot-001",
+  "scene": "Opening",
+  "durationSeconds": 7,
+  "model": "kling3_0",
+  "shotRole": "hook",
+  "status": "planned",
+  "generation": {
+    "resolution": "720p"
+  }
+}
+```
+
+## Workflow
+
+```mermaid
+flowchart LR
+  A["JSON brief"] --> B["Planner"]
+  B --> C["Video plan + script"]
+  C --> D["Shot manifest"]
+  D --> E["Higgsfield clips"]
+  E --> F["ffmpeg assembly"]
+  F --> G["MP4 exports"]
+  F --> H["SRT captions"]
+  F --> I["QA reports"]
+```
+
+Planning has two modes:
+
+| Mode | What happens | External calls |
+| --- | --- | --- |
+| `template` | Built-in templates turn the brief into a plan and manifest. | None |
+| `local_llm` | Ollama or LM Studio drafts the structured plan, then Reelwright validates it. | Local LLM only |
+
+## Full Render
 
 To check the full media toolchain:
 
@@ -52,7 +113,7 @@ assembly.
 - Writes machine-readable and Markdown QA reports.
 - Keeps project state on disk so interrupted runs can be inspected and resumed.
 
-## Good For
+## What You Can Build
 
 - Prototyping Higgsfield-based video workflows from repeatable briefs.
 - Turning short-form ideas into a shot manifest before spending generation
@@ -61,6 +122,8 @@ assembly.
   CLI.
 - Inspecting or adapting a practical ffmpeg assembly pipeline for AI-generated
   video.
+- Short-form explainers, product demos, UGC-style ads, tutorials, and social
+  video experiments.
 
 ## Requirements
 
