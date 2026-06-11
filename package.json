@@ -1,0 +1,51 @@
+{
+  "name": "reelwright",
+  "version": "0.1.0",
+  "description": "CLI-first AI video production pipeline for Higgsfield, ffmpeg, captions, and QA reports.",
+  "license": "MIT",
+  "author": "v0idum",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v0idum/reelwright.git"
+  },
+  "homepage": "https://github.com/v0idum/reelwright#readme",
+  "bugs": {
+    "url": "https://github.com/v0idum/reelwright/issues"
+  },
+  "keywords": [
+    "ai-video",
+    "creative-automation",
+    "higgsfield",
+    "ffmpeg",
+    "video-pipeline",
+    "captions",
+    "qa-reports"
+  ],
+  "type": "module",
+  "bin": {
+    "reelwright": "src/cli.ts"
+  },
+  "scripts": {
+    "reelwright": "tsx src/cli.ts",
+    "doctor": "tsx src/cli.ts doctor",
+    "demo:plan": "tsx src/cli.ts plan briefs/ai-video-workflow-demo.json",
+    "demo:run": "tsx src/cli.ts run briefs/ai-video-workflow-demo.json",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "validate": "npm run typecheck && npm test",
+    "mvp": "tsx src/cli.ts mvp briefs/short-form-addiction.json",
+    "mvp:director": "tsx src/cli.ts director-mvp briefs/short-form-addiction-director.json",
+    "mvp:universal": "tsx src/cli.ts run briefs/ai-video-workflow-demo.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "tsx": "^4.20.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}

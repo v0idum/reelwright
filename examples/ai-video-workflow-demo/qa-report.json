@@ -1,0 +1,14 @@
+{
+  "exportPath": "examples/ai-video-workflow-demo/exports/youtube-sample.mp4",
+  "expectedWidth": 1920,
+  "expectedHeight": 1080,
+  "actualWidth": 1920,
+  "actualHeight": 1080,
+  "durationSeconds": 90,
+  "issues": [
+    {
+      "severity": "info",
+      "message": "Representative QA report only; generated media is not committed."
+    }
+  ]
+}

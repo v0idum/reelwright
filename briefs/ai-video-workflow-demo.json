@@ -1,0 +1,35 @@
+{
+  "topic": "AI video workflow demo",
+  "audience": "creators, operators, and small teams building repeatable video systems",
+  "platforms": ["youtube", "shorts"],
+  "language": "en",
+  "tone": "clear, practical, modern",
+  "cta": "Turn one repeatable content idea into a structured video workflow",
+  "targetDurationSeconds": 90,
+  "videoType": "guide",
+  "primaryGoal": "show how a brief becomes a reusable video production pipeline",
+  "productOrOffer": "Reelwright CLI video workflow",
+  "brandStyle": [
+    "clean production dashboard",
+    "practical creative operations",
+    "structured planning before generation"
+  ],
+  "continuityMode": "style",
+  "platformPackage": "standard_social",
+  "assets": [{
+    "id": "workflow-dashboard-reference",
+    "kind": "reference",
+    "description": "A clean creative operations desk with shot planning, generation queue, timeline, captions, and QA panels"
+  }],
+  "planning": { "mode": "template" },
+  "generationDefaults": { "model": "kling3_0", "resolution": "720p" },
+  "voiceover": { "mode": "local_placeholder" },
+  "visualContinuity": [
+    "one clean creative production workspace",
+    "recurring brief, shot list, generation queue, timeline, captions, and QA report panels",
+    "blue, white, graphite, and soft studio-light palette",
+    "smooth camera moves, match cuts between workflow stages, no readable interface text"
+  ],
+  "styleReferences": ["clean AI video workflow", "modern creator operations dashboard"],
+  "constraints": ["no real company logos", "no real public figures", "no readable UI text"]
+}

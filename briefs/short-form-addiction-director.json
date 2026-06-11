@@ -1,0 +1,27 @@
+{
+  "topic": "Why short-form videos feel addictive, explained in 75 seconds",
+  "audience": "founders and creators who want better retention",
+  "platforms": ["youtube", "shorts"],
+  "language": "en",
+  "tone": "sharp, premium, useful",
+  "cta": "Use Reelwright to turn briefs into consistent video systems",
+  "targetDurationSeconds": 75,
+  "generationDefaults": { "model": "kling3_0", "resolution": "720p" },
+  "voiceover": {
+    "mode": "local_tts",
+    "engine": "mlx_audio",
+    "model": "mlx-community/Kokoro-82M-4bit",
+    "voice": "af_heart",
+    "speed": 1.05,
+    "langCode": "a",
+    "audioFormat": "wav"
+  },
+  "visualContinuity": [
+    "one dark creator studio",
+    "same phone, desk, waveform monitor, and editing timeline motif",
+    "electric cyan, warm amber, and neutral graphite palette",
+    "macro shots, slow pushes, match cuts, and repeated circular swipe motion"
+  ],
+  "styleReferences": ["premium creator explainer", "cinematic productized education"],
+  "constraints": ["no app logos", "no celebrity likeness", "no copyrighted UI"]
+}

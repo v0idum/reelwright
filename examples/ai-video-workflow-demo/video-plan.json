@@ -1,0 +1,402 @@
+{
+  "project": "ai-video-workflow-demo",
+  "topic": "AI video workflow demo",
+  "videoType": "guide",
+  "primaryGoal": "show how a brief becomes a reusable video production pipeline",
+  "productOrOffer": "Reelwright CLI video workflow",
+  "targetDurationSeconds": 90,
+  "speaker": "clear, practical, modern narrator",
+  "audience": "creators, operators, and small teams building repeatable video systems",
+  "platforms": [
+    "youtube",
+    "shorts"
+  ],
+  "language": "en",
+  "tone": "clear, practical, modern",
+  "cta": "Turn one repeatable content idea into a structured video workflow",
+  "brandStyle": [
+    "clean production dashboard",
+    "practical creative operations",
+    "structured planning before generation"
+  ],
+  "continuityMode": "style",
+  "platformPackage": "standard_social",
+  "assets": [
+    {
+      "id": "workflow-dashboard-reference",
+      "kind": "reference",
+      "description": "A clean creative operations desk with shot planning, generation queue, timeline, captions, and QA panels"
+    }
+  ],
+  "visualStyle": "Premium business guide video with modern operations dashboards, cinematic office lighting, and practical AI workflow visuals",
+  "promptSafetyRules": [
+    "No text",
+    "no logos",
+    "no celebrity likeness",
+    "no real public figures",
+    "cinematic social video",
+    "no real company logos",
+    "no real public figures",
+    "no readable UI text"
+  ],
+  "generationDefaults": {
+    "model": "kling3_0",
+    "resolution": "720p"
+  },
+  "continuityAnchors": [
+    {
+      "id": "business-operations-agent-system",
+      "description": "one clean creative production workspace; recurring brief, shot list, generation queue, timeline, captions, and QA report panels; blue, white, graphite, and soft studio-light palette; smooth camera moves, match cuts between workflow stages, no readable interface text",
+      "rules": [
+        "one clean creative production workspace",
+        "recurring brief, shot list, generation queue, timeline, captions, and QA report panels",
+        "blue, white, graphite, and soft studio-light palette",
+        "smooth camera moves, match cuts between workflow stages, no readable interface text"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-001",
+      "title": "Practical implementation guide",
+      "startSeconds": 0,
+      "endSeconds": 90
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-001",
+      "chapterId": "chapter-001",
+      "title": "Opening",
+      "purpose": "Frame AI agents as practical operating help, not abstract technology.",
+      "startSeconds": 0,
+      "endSeconds": 15
+    },
+    {
+      "id": "scene-002",
+      "chapterId": "chapter-001",
+      "title": "Use cases",
+      "purpose": "Show customer support automation.",
+      "startSeconds": 15,
+      "endSeconds": 55
+    },
+    {
+      "id": "scene-003",
+      "chapterId": "chapter-001",
+      "title": "Integration",
+      "purpose": "Explain how to integrate agents safely.",
+      "startSeconds": 55,
+      "endSeconds": 71
+    },
+    {
+      "id": "scene-004",
+      "chapterId": "chapter-001",
+      "title": "Benefits",
+      "purpose": "Make the value concrete.",
+      "startSeconds": 71,
+      "endSeconds": 87
+    },
+    {
+      "id": "scene-005",
+      "chapterId": "chapter-001",
+      "title": "CTA",
+      "purpose": "Close with a concrete next action.",
+      "startSeconds": 87,
+      "endSeconds": 90
+    }
+  ],
+  "beats": [
+    {
+      "id": "beat-001",
+      "sceneId": "scene-001",
+      "title": "Business-first hook",
+      "voiceoverSegmentId": "vo-001"
+    },
+    {
+      "id": "beat-002",
+      "sceneId": "scene-001",
+      "title": "Service business context",
+      "voiceoverSegmentId": "vo-002"
+    },
+    {
+      "id": "beat-003",
+      "sceneId": "scene-002",
+      "title": "Retail support",
+      "voiceoverSegmentId": "vo-003"
+    },
+    {
+      "id": "beat-004",
+      "sceneId": "scene-002",
+      "title": "Restaurants and bookings",
+      "voiceoverSegmentId": "vo-004"
+    },
+    {
+      "id": "beat-005",
+      "sceneId": "scene-002",
+      "title": "Clinic appointments",
+      "voiceoverSegmentId": "vo-005"
+    },
+    {
+      "id": "beat-006",
+      "sceneId": "scene-002",
+      "title": "Logistics dispatch",
+      "voiceoverSegmentId": "vo-006"
+    },
+    {
+      "id": "beat-007",
+      "sceneId": "scene-002",
+      "title": "Sales follow-up",
+      "voiceoverSegmentId": "vo-007"
+    },
+    {
+      "id": "beat-008",
+      "sceneId": "scene-003",
+      "title": "Start narrow",
+      "voiceoverSegmentId": "vo-008"
+    },
+    {
+      "id": "beat-009",
+      "sceneId": "scene-003",
+      "title": "Human approval",
+      "voiceoverSegmentId": "vo-009"
+    },
+    {
+      "id": "beat-010",
+      "sceneId": "scene-004",
+      "title": "Benefits",
+      "voiceoverSegmentId": "vo-010"
+    },
+    {
+      "id": "beat-011",
+      "sceneId": "scene-004",
+      "title": "Avoid hype",
+      "voiceoverSegmentId": "vo-011"
+    },
+    {
+      "id": "beat-012",
+      "sceneId": "scene-005",
+      "title": "One process this week",
+      "voiceoverSegmentId": "vo-012"
+    }
+  ],
+  "voiceoverSegments": [
+    {
+      "id": "vo-001",
+      "text": "AI agents become useful when a business has repeated requests, messages, documents, calls, and decisions that consume the team's time every day.",
+      "startSeconds": 0,
+      "endSeconds": 7
+    },
+    {
+      "id": "vo-002",
+      "text": "This is visible in retail, restaurants, clinics, logistics, and sales: customers message quickly, expect fast answers, and teams still handle too much manually.",
+      "startSeconds": 7,
+      "endSeconds": 15
+    },
+    {
+      "id": "vo-003",
+      "text": "First: retail support. An agent answers stock, sizing, delivery, and return questions, collects customer details, and hands the manager a prepared conversation.",
+      "startSeconds": 15,
+      "endSeconds": 23
+    },
+    {
+      "id": "vo-004",
+      "text": "For restaurants, an agent can handle bookings, confirm time, guest count, preferences, and help delivery customers with repeat orders and status updates.",
+      "startSeconds": 23,
+      "endSeconds": 31
+    },
+    {
+      "id": "vo-005",
+      "text": "In clinics, an agent does not replace the doctor. It schedules patients, sends reminders, gathers basic information, and reduces repetitive admin calls.",
+      "startSeconds": 31,
+      "endSeconds": 39
+    },
+    {
+      "id": "vo-006",
+      "text": "In logistics, an agent can collect address, timing, cargo type, missing details, and prepare a dispatch task without long back-and-forth messages.",
+      "startSeconds": 39,
+      "endSeconds": 47
+    },
+    {
+      "id": "vo-007",
+      "text": "In sales, an agent reminds the team about leads, prepares follow-ups, records objections, updates the CRM, and helps managers avoid losing warm contacts.",
+      "startSeconds": 47,
+      "endSeconds": 55
+    },
+    {
+      "id": "vo-008",
+      "text": "Good implementation does not start with a huge project. Choose one narrow process: requests, bookings, answers, documents, or reports. Define the rules and connect the agent there first.",
+      "startSeconds": 55,
+      "endSeconds": 63
+    },
+    {
+      "id": "vo-009",
+      "text": "At first, the agent should not make risky decisions alone. It collects information, drafts responses, creates tasks, and a human approves important actions.",
+      "startSeconds": 63,
+      "endSeconds": 71
+    },
+    {
+      "id": "vo-010",
+      "text": "The value usually appears in three places: faster first response, less manual routine, and better process control. The team sees what is happening and the customer waits less.",
+      "startSeconds": 71,
+      "endSeconds": 79
+    },
+    {
+      "id": "vo-011",
+      "text": "The main mistake is adopting AI for its own sake. A strong agent is tied to a clear task, clear data, clear responsibility, and a measurable outcome.",
+      "startSeconds": 79,
+      "endSeconds": 87
+    },
+    {
+      "id": "vo-012",
+      "text": "Turn one repeatable content idea into a structured video workflow. Start with a small process, check response quality, keep the team in control, and scale only what genuinely saves time.",
+      "startSeconds": 87,
+      "endSeconds": 90
+    }
+  ],
+  "plannedShots": [
+    {
+      "id": "shot-001",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-001",
+      "beatId": "beat-001",
+      "shotRole": "hook",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 0,
+      "endSeconds": 7,
+      "visual": "A modern service-business operations desk connects customer messages, CRM cards, a dispatch map, and KPI panels into one coherent workflow.",
+      "camera": "slow push from the whole operations desk into the first customer request"
+    },
+    {
+      "id": "shot-002",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-001",
+      "beatId": "beat-002",
+      "shotRole": "explain",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 7,
+      "endSeconds": 15,
+      "visual": "A connected city-business montage shows retail, restaurant, clinic, warehouse, and sales office workflows sharing the same clean visual system.",
+      "camera": "match cuts across five business environments using the same blue-white interface glow"
+    },
+    {
+      "id": "shot-003",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-002",
+      "beatId": "beat-003",
+      "shotRole": "proof",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 15,
+      "endSeconds": 23,
+      "visual": "A retail customer message queue becomes organized into answered questions, order details, and a clean handoff card.",
+      "camera": "top-down desk shot, message cards snap into an orderly customer profile"
+    },
+    {
+      "id": "shot-004",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-002",
+      "beatId": "beat-004",
+      "shotRole": "proof",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 23,
+      "endSeconds": 31,
+      "visual": "Restaurant reservation tiles, delivery order cards, and a warm operations dashboard update in one connected flow.",
+      "camera": "gentle lateral move across reservation, kitchen, and delivery panels"
+    },
+    {
+      "id": "shot-005",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-002",
+      "beatId": "beat-005",
+      "shotRole": "proof",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 31,
+      "endSeconds": 39,
+      "visual": "A clinic front desk workflow shows appointment slots, reminder cards, and a patient intake checklist without readable private data.",
+      "camera": "calm push across appointment timeline and neutral patient intake cards"
+    },
+    {
+      "id": "shot-006",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-002",
+      "beatId": "beat-006",
+      "shotRole": "proof",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 39,
+      "endSeconds": 47,
+      "visual": "A dispatch map, route cards, cargo notes, and driver task queue align into a clean logistics control view.",
+      "camera": "map-level push-in, then match cut to organized dispatch cards"
+    },
+    {
+      "id": "shot-007",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-002",
+      "beatId": "beat-007",
+      "shotRole": "proof",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 47,
+      "endSeconds": 55,
+      "visual": "Sales leads move from messy notes into a clean CRM pipeline with follow-up reminders and manager handoff cards.",
+      "camera": "over-shoulder CRM view, slow push as leads become prioritized"
+    },
+    {
+      "id": "shot-008",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-003",
+      "beatId": "beat-008",
+      "shotRole": "explain",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 55,
+      "endSeconds": 63,
+      "visual": "A single process lane is highlighted from a larger business operations map, with inputs, rules, review, and handoff clearly separated.",
+      "camera": "wide operations map narrows into one highlighted automation lane"
+    },
+    {
+      "id": "shot-009",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-003",
+      "beatId": "beat-009",
+      "shotRole": "explain",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 63,
+      "endSeconds": 71,
+      "visual": "An approval checkpoint sits between agent-prepared cards and final business actions, making human review visually clear.",
+      "camera": "locked-off approval station, cards move through a visible review gate"
+    },
+    {
+      "id": "shot-010",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-004",
+      "beatId": "beat-010",
+      "shotRole": "broll",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 71,
+      "endSeconds": 79,
+      "visual": "Three KPI cards animate as first response, manual workload, and process visibility improve across the same operations dashboard.",
+      "camera": "clean dashboard push, three metric cards light up in sequence"
+    },
+    {
+      "id": "shot-011",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-004",
+      "beatId": "beat-011",
+      "shotRole": "transition",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 79,
+      "endSeconds": 87,
+      "visual": "Abstract AI hype dissolves into a practical checklist: task, data, responsibility, measurable result, without readable text.",
+      "camera": "soft transition from abstract glow to practical operations board"
+    },
+    {
+      "id": "shot-012",
+      "chapterId": "chapter-001",
+      "sceneId": "scene-005",
+      "beatId": "beat-012",
+      "shotRole": "cta",
+      "continuityId": "business-operations-agent-system",
+      "startSeconds": 87,
+      "endSeconds": 90,
+      "visual": "The full business operations system resolves into one clear next-step workflow with agent, human review, and export-ready video polish.",
+      "camera": "wide reveal of the connected business workflow, then final push into the selected process lane"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "topic": "Why short-form videos feel addictive, explained in 45 seconds",
+  "audience": "curious creators and small business owners",
+  "platforms": ["youtube", "shorts"],
+  "language": "en",
+  "tone": "fast, sharp, cinematic, useful",
+  "cta": "Follow for sharper creative strategy",
+  "styleReferences": [
+    "kinetic creator explainer",
+    "premium social media documentary",
+    "high contrast macro visuals"
+  ],
+  "constraints": [
+    "avoid real public figures",
+    "avoid copyrighted app logos",
+    "no medical claims"
+  ]
+}
