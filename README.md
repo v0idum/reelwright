@@ -4,8 +4,11 @@ Reelwright is a CLI-first AI video production pipeline. It turns a JSON creative
 brief into a video plan, script, shot manifest, Higgsfield generation jobs,
 ffmpeg exports, captions, and QA reports.
 
-The project is built for local use. Planning and validation can run without
-spending generation credits; full rendering uses Higgsfield and ffmpeg.
+The project is built for local use. By default, planning is deterministic: the
+CLI validates the JSON brief and expands it through built-in templates, so
+`plan` does not call Higgsfield, ffmpeg, or an LLM. Optional local LLM planning
+is available through Ollama or LM Studio. Full rendering uses Higgsfield and
+ffmpeg.
 
 ## Quickstart
 
@@ -17,7 +20,8 @@ npm run demo:plan
 ```
 
 `demo:plan` is safe to run first. It writes planning artifacts under
-`projects/ai-video-workflow-demo/` without calling Higgsfield.
+`projects/ai-video-workflow-demo/` without calling Higgsfield, ffmpeg, or an
+LLM.
 
 To check the full media toolchain:
 
@@ -34,6 +38,10 @@ npm run demo:run
 
 `demo:run` can call Higgsfield and may spend generation credits.
 
+The sample brief uses the macOS placeholder voiceover mode. On Linux or
+Windows, switch `voiceover.mode` to `provided_audio` or `local_tts` before full
+assembly.
+
 ## What It Does
 
 - Reads strict JSON briefs from `briefs/`.
@@ -43,6 +51,16 @@ npm run demo:run
 - Produces SRT captions.
 - Writes machine-readable and Markdown QA reports.
 - Keeps project state on disk so interrupted runs can be inspected and resumed.
+
+## Good For
+
+- Prototyping Higgsfield-based video workflows from repeatable briefs.
+- Turning short-form ideas into a shot manifest before spending generation
+  credits.
+- Batch-generating clips, captions, exports, and QA artifacts from one local
+  CLI.
+- Inspecting or adapting a practical ffmpeg assembly pipeline for AI-generated
+  video.
 
 ## Requirements
 
@@ -63,7 +81,9 @@ Optional voiceover modes:
 - `local_tts` uses local MLX-Audio/Kokoro tooling.
 - `provided_audio` uses an audio file path from the brief.
 
-Planning-only commands do not require Higgsfield, ffmpeg, or voiceover tooling.
+Template planning-only commands do not require Higgsfield, ffmpeg, an LLM, or
+voiceover tooling. Local LLM planning requires a running Ollama or LM Studio
+server, but still does not call Higgsfield.
 
 ## Higgsfield Setup
 
@@ -105,9 +125,13 @@ npm run reelwright -- mvp <brief.json>
 Command notes:
 
 - `doctor` checks Node, ffmpeg, ffprobe, and Higgsfield CLI availability.
-- `demo:plan` runs the neutral sample brief through planning only.
+- `demo:plan` runs the neutral sample brief through deterministic template
+  planning only.
 - `demo:run` runs the neutral sample brief through the full pipeline.
 - `plan` writes planning artifacts only and does not spend Higgsfield credits.
+  With `planning.mode: "template"`, it is fully deterministic. With
+  `planning.mode: "local_llm"`, it calls only your local Ollama or LM Studio
+  server.
 - `run` is the current director pipeline.
 - `director-mvp` is a backwards-compatible alias for `run`.
 - `mvp` runs the older MVP pipeline.
@@ -193,7 +217,11 @@ Uses local open-model TTS.
 
 ## Local LLM Planning
 
-Template planning is the default. Briefs can also use a local LLM planner:
+Template planning is the default. It turns the brief into a structured video
+plan using code and built-in templates, with no model call.
+
+Briefs can also use a local LLM planner when you want Ollama or LM Studio to
+draft the structured plan:
 
 ```json
 {
@@ -206,8 +234,10 @@ Template planning is the default. Briefs can also use a local LLM planner:
 }
 ```
 
-The planner asks the local model for structured JSON, extracts the first valid
-JSON object, and rejects output that does not match the `VideoPlan` schema.
+The local planner asks the model for structured JSON, extracts the first valid
+JSON object, and rejects output that does not match the `VideoPlan` schema. It
+does not call Higgsfield or spend generation credits; those only happen during
+full rendering commands such as `run` or `demo:run`.
 
 ## Architecture
 
